@@ -5,8 +5,6 @@ module Api
     # GET /notes.json
     def index
       @notes = Note.all
-      ap "API NOTES ARE"
-      ap @api_notes
     end
 
     # GET /notes/1
@@ -19,6 +17,11 @@ module Api
     # POST /notes.json
     def create
       @note = Note.new(note_params)
+      tags = params[:tags]
+      tag_names = tags.split(',')
+      tag_objects = tag_names.map { |tag_name| Tag.find_or_create_by(name: tag_name) }
+
+      @note.tags = tag_objects
 
       if @note.save
         render :show, status: :created, location: @note
@@ -53,7 +56,7 @@ module Api
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def note_params
-        params.require(:note).permit(:title, :body)
+        params.permit(:title, :body)
       end
   end
 end
