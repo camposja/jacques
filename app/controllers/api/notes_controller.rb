@@ -5,6 +5,8 @@ module Api
     # GET /notes.json
     def index
       @notes = Note.all
+      ap "API NOTES ARE"
+      ap @api_notes
     end
 
     # GET /notes/1

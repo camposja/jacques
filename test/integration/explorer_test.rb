@@ -12,7 +12,7 @@ class ExplorerTest < ActionDispatch::IntegrationTest
     assert_equal 200, status
     json = JSON.parse(response.body)
     assert json['notes']
-    assert json['notes'].length == 10
+    assert_equal 10, json['notes'].length
   end
 
   def test_it_should_be_in_the_correct_format
