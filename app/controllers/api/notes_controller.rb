@@ -24,9 +24,11 @@ module Api
       @note.tags = tag_objects
 
       if @note.save
-        render :show, status: :created, location: @note
+        # either of these are ok
+        # render :show, status: :created, location: [:api, @note]
+        render :show, status: :created, location: api_note_url(@note)
       else
-        render json: @note.errors, status: 400
+        render :error, status: 400
       end
     end
 
