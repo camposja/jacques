@@ -18,7 +18,7 @@ module Api
     def create
       @note = Note.new(note_params)
       tags = params[:tags]
-      tag_names = tags.split(',')
+      tag_names = tags.split(',').map { |name| name.strip }
       tag_objects = tag_names.map { |tag_name| Tag.find_or_create_by(name: tag_name) }
 
       @note.tags = tag_objects
