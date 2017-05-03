@@ -25,6 +25,7 @@ class ExplorerTest < ActionDispatch::IntegrationTest
   def test_tag_lists_are_correct
     note = Note.first
     get "/api/notes/tag/#{note.tags.first.name}"
+    ap JSON
     json = JSON.parse(response.body)
     assert_equal note.tags.first.name, json['tag']['name']
     assert_equal example_note(Note.first), json['notes'].first

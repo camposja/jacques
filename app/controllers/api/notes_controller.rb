@@ -1,6 +1,10 @@
 module Api
   class NotesController < ApplicationController
 
+    def for_tag
+      @tag_name = params[:tag_name]
+    end
+
     # GET /notes
     # GET /notes.json
     def index
