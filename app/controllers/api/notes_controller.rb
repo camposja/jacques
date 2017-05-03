@@ -3,7 +3,36 @@ module Api
 
     def for_tag
       @tag_name = params[:tag_name]
+
+      @notes = Tag.find_by(name: @tag_name).notes
     end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     # GET /notes
     # GET /notes.json
