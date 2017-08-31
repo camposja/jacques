@@ -6,11 +6,13 @@ In this assingment a frontend developer has laid out his code to be used with an
 This result signals that the API created will match the code in the frontend.
 
 
-"Run options: --seed 54706
-Running:
-..............
-Finished in 1.664189s, 8.4125 runs/s, 12.0179 assertions/s.
-14 runs, 20 assertions, 0 failures, 0 errors, 0 skips"
+### "Run options: --seed 54706
+### Running:
+
+### ..............
+
+### Finished in 1.664189s, 8.4125 runs/s, 12.0179 assertions/s.
+### 14 runs, 20 assertions, 0 failures, 0 errors, 0 skips"
 
 
 
