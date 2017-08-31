@@ -1,24 +1,23 @@
-## README
+# Jacques (test driven dev)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Assignment while at The Iron Yard, Developers Bootcamp.
 
-Things you may want to cover:
+In this assingment a frontend developer has laid out his code to be used with an API in the backend. The frontend dev has specified what he is expecting from the API. Test driven developement (rails test) had to be performed configuring the API code until the below result was obtained.
 
-* Ruby version
 
-* System dependencies
+"Run options: --seed 54706
+### Running:
 
-* Configuration
+..............
 
-* Database creation
+Finished in 1.664189s, 8.4125 runs/s, 12.0179 assertions/s.
+14 runs, 20 assertions, 0 failures, 0 errors, 0 skips"
 
-* Database initialization
 
-* How to run the test suite
+Features of the exercise:
 
-* Services (job queues, cache servers, search engines, etc.)
+* Test driven development
 
-* Deployment instructions
+* JSON
 
-* ...
+* API creation
